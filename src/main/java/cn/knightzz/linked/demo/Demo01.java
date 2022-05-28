@@ -1,4 +1,4 @@
-package cn.knightzz.linked.demo01;
+package cn.knightzz.linked.demo;
 
 /**
  * @author 王天赐

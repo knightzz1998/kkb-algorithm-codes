@@ -1,9 +1,8 @@
 package cn.knightzz.linked.leetcode;
 
+import cn.knightzz.linked.entity.ListNode;
+
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.List;
 
 /**
  * @author 王天赐
@@ -30,16 +29,16 @@ public class LeetCode141HashTable {
             // 使用哈希表的方式, 将数据放入进去
             while (p != null && p.next != null) {
 
-                Integer key = p.val;
-
+                // 使用哈希值来标记
+                int hashCode = p.hashCode();
 
                 // Hash 表的方式, 要保证key不同, 如果key相同就没法用哈希表
                 // 这种方式假设链表的值都不相同
-                if (hashtable.get(key) != null) {
+                if (hashtable.get(hashCode) != null) {
                     return true;
                 }
 
-                hashtable.put(key, key);
+                hashtable.put(hashCode, p.val);
                 p = p.next;
 
             }

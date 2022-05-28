@@ -1,5 +1,8 @@
 package cn.knightzz.linked.leetcode;
 
+import cn.knightzz.linked.entity.ListNode;
+import cn.knightzz.linked.util.ListNodeUtils;
+
 /**
  * @author 王天赐
  * @title: LeetCode114
@@ -11,7 +14,6 @@ package cn.knightzz.linked.leetcode;
  */
 @SuppressWarnings("all")
 public class LeetCode141TwoPoint {
-
 
     class Solution {
         public boolean hasCycle(ListNode head) {
@@ -41,5 +43,12 @@ public class LeetCode141TwoPoint {
 
     public static void main(String[] args) {
 
+        int[] nums = new int[]{3,2,4,2,1};
+        ListNode node = ListNodeUtils.createLink(nums);
+        Solution solution = new LeetCode141TwoPoint().new Solution();
+
+        boolean hasCycle = solution.hasCycle(node);
+
+        System.out.println(hasCycle ? "有环":"无环");
     }
 }

@@ -1,4 +1,4 @@
-package cn.knightzz.linked.leetcode;
+package cn.knightzz.linked.entity;
 
 /**
  * @author 王天赐
@@ -11,10 +11,10 @@ package cn.knightzz.linked.leetcode;
  */
 @SuppressWarnings("all")
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }
