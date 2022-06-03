@@ -29,4 +29,13 @@ public class ListNodeUtils {
         }
         return head;
     }
+
+    public static void getListNodeInfo(ListNode head ){
+        ListNode p = head;
+
+        while (p != null) {
+            System.out.println(p.val);
+            p = p.next;
+        }
+    }
 }
