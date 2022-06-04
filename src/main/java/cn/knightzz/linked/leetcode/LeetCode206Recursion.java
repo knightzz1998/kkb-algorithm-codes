@@ -25,21 +25,23 @@ public class LeetCode206Recursion {
             return reverse(head);
         }
 
-        public ListNode reverse(ListNode node) {
+        public ListNode reverse(ListNode head) {
 
             // 1 , 2 , 3, 4, 5, null
 
             // 递归边界
-            if (node == null || node.next == null) {
-                return node;
+            if (head == null || head.next == null) {
+                return head;
             }
 
             // 将当前节点后面所有的节点逆转
-            ListNode pre = reverse(node.next);
-            // 注意啊 这个 pre 是 逆序过来的头结点
-            node.next.next = node;
-            node.next = null;
-            return pre;
+            ListNode reverseHead = reverse(head.next);
+            ListNode tail = head.next;
+
+            head.next = tail.next;
+            tail.next = head;
+
+            return reverseHead;
         }
     }
 

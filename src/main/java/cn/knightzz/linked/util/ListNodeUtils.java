@@ -1,5 +1,6 @@
 package cn.knightzz.linked.util;
 
+import cn.hutool.core.util.RandomUtil;
 import cn.knightzz.linked.entity.ListNode;
 
 /**
@@ -20,6 +21,21 @@ public class ListNodeUtils {
      */
     public static ListNode createLink(int[] nums){
 
+        return getListNode(nums);
+    }
+
+    public static ListNode createLink(int n, Boolean isSorted){
+
+        int[] nums = RandomUtil.randomInts(n);
+        if (isSorted) {
+            for (int i = 0; i < n; i++) {
+                nums[i] = i + 1;
+            }
+        }
+        return getListNode(nums);
+    }
+
+    private static ListNode getListNode(int[] nums) {
         ListNode head = new ListNode(nums[0]);
         ListNode p = head;
 
@@ -34,8 +50,9 @@ public class ListNodeUtils {
         ListNode p = head;
 
         while (p != null) {
-            System.out.println(p.val);
+            System.out.print(p.val + "->");
             p = p.next;
         }
+        System.out.println();
     }
 }
