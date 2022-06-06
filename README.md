@@ -15,3 +15,7 @@
 ✅[LeetCode206反转链表](https://leetcode.cn/problems/reverse-linked-list) `2022年6月3日`
 
 ✅[LeetCode92反转链表II](https://leetcode.cn/problems/reverse-linked-list-ii) `2022年6月4日`
+
+✅[LeetCode25K个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/) `2022年6月5日`
+
+✅[LeetCode61旋转链表](https://leetcode.cn/problems/rotate-list/) `2022年6月6日`
