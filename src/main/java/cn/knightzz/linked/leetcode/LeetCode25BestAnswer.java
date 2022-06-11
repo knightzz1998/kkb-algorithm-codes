@@ -3,10 +3,11 @@ package cn.knightzz.linked.leetcode;
 import cn.knightzz.linked.entity.ListNode;
 
 /**
+ *
  * @author 王天赐
  * @title: LeetCode25BestAnswer
  * @projectName kkb-algorithm-codes
- * @description:
+ * @description: LeetCode25BestAnswer
  * @website http://knightzz.cn/
  * @github https://github.com/knightzz1998
  * @date 5/6/2022 下午9:35
