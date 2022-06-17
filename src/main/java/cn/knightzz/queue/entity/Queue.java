@@ -36,6 +36,8 @@ public class Queue {
         }
 
         this.cache[tail] = x;
+
+        // 这里需要注意的是, tail指向的是实际尾部的下一个位置
         tail++;
     }
 
@@ -83,8 +85,21 @@ public class Queue {
      */
     public void output() {
 
-        for (int i = head; i < tail; i++) {
+        for (int i = tail - 1; i >= head; i--) {
+            System.out.print("| ");
             System.out.print(cache[i]);
+            System.out.println(" |");
         }
+    }
+
+    public static void main(String[] args) {
+
+        Queue queue = new Queue(10);
+        queue.push(1);
+        queue.push(2);
+        queue.push(3);
+        queue.push(4);
+
+        queue.output();
     }
 }
